@@ -1,0 +1,103 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>"Luna Muerta" - Canciones de Manuel Palau - Mar Morán & Aurelio Viribay</title>
+		<meta name="title" content='"Luna Muerta" - Canciones de Manuel Palau - Mar Morán & Aurelio Viribay'>
+		<meta name="description" content="Presentamos el próximo disco, Luna Muerta de la soprano Mar Morán y el pianista Aurelio Viribay dedicado al compositor valenciano Manuel Palau">
+		<meta name="keywords" content="Manuel Palau, Mar Morán, Aurelio Viribay, Canción Española, Spanish Songs, Soprano, Pianista, musica Clásica, Clasical Music, Disco, canción">
+		<meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="language" content="Spanish">
+		<meta name="author" content="Gomar producciones">
+		<meta itemprop="name" content='"Luna Muerta" - Canciones de Manuel Palau - Mar Morán & Aurelio Viribay'>
+		<meta itemprop="description" content="Presentamos el próximo disco, Luna Muerta de la soprano Mar Morán y el pianista Aurelio Viribay dedicado al compositor valenciano Manuel Palau">
+		<meta name="image" content="https://firebasestorage.googleapis.com/v0/b/ayudaaunar.appspot.com/o/Screenshot.png?alt=media&token=5bbf50f1-ba6f-414f-9a6c-50c622867bff">
+	
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content='"Luna Muerta" - Canciones de Manuel Palau - Mar Morán & Aurelio Viribay'>
+		<meta name="twitter:description" content="Presentamos el próximo disco, Luna Muerta de la soprano Mar Morán y el pianista Aurelio Viribay dedicado al compositor valenciano Manuel Palau">
+		<meta name="twitter:image:src" content="https://firebasestorage.googleapis.com/v0/b/ayudaaunar.appspot.com/o/Screenshot.png?alt=media&token=5bbf50f1-ba6f-414f-9a6c-50c622867bff">
+	
+		<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+		<meta name="og:title" content=""Luna Muerta" - Canciones de Manuel Palau - Mar Morán & Aurelio Viribay">
+		<meta name="og:description" content="Presentamos el próximo disco, Luna Muerta de la soprano Mar Morán y el pianista Aurelio Viribay dedicado al compositor valenciano Manuel Palau">
+		<meta name="og:url" content="www.lunamuerta.com">
+		<meta name="og:site_name" content='"Luna Muerta" - Canciones de Manuel Palau - Mar Morán & Aurelio Viribay'>
+		<meta name="og:locale" content="es_ES">
+		<meta name="og:type" content="website">
+		<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" as="style"
+		onload="this.onload=null;this.rel='stylesheet'">
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	h1, h2, h3, h4, h5, h6, p{
+		margin: 5px;
+		padding: 0;
+	}
+	section{
+		height: 100vh;
+	}
+	html{
+		--main-color: #1B262C;
+		--secondary-color: #0F4C75;
+		--tertiary-color: #3282B8;
+		--light-color: #bbbbbb;
+		--dark-color: #000000;
+		
+		/* fontSizes variables */
+		--font-size-1: 1.2rem;
+		--font-size-2: 1.4rem;
+		--font-size-3: 1.6rem;
+		--font-size-4: 1.8rem;
+		--font-size-5: 2rem;
+		--font-size-6: 2.2rem;
+		/* margins variables */
+		--margin-1: 0.5rem;
+		--margin-2: 1rem;
+		--margin-3: 1.5rem;
+		--margin-4: 2rem;
+		--margin-5: 2.5rem;
+		--margin-6: 3rem;
+		/* paddings variables */
+		--padding-1: 0.5rem;
+		--padding-2: 1rem;
+		--padding-3: 1.5rem;
+		--padding-4: 2rem;
+		--padding-5: 2.5rem;
+		--padding-6: 3rem;
+		/* spaces variables */
+		--space-1: 0.5rem;
+		--space-2: 1rem;
+		--space-3: 1.5rem;
+		--space-4: 2rem;
+		--space-5: 2.5rem;
+		--space-6: 3rem;
+		background-color: var(--dark-color);
+		scroll-behavior: smooth;
+		font-size: 16px;
+	}
+	html, body{
+		font-family: 'Questrial', sans-serif;
+		font-size: var(--font-size-3);
+		color: var(--light-color);
+		margin: 0;
+		padding: 0;
+	}
+</style>

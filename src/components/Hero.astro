@@ -1,0 +1,127 @@
+---
+
+---
+
+<section id="hero" class="hero">
+    <div class="mask">
+    </div>
+    <div class="hero__container">
+        <h1 class="hero__title">Luna Muerta</h1>
+        <p class="hero__subtitle">Manuel Palau</p>
+        <p class="hero__text">
+            <a class="link" href="http://marmoransoprano.com" target="_blank" rel="noopener noreferrer" title="Link to Mar Morán site">Mar Morán</a> 
+            & 
+            <a class="link" href="https://www.aurelioviribay.com/" target="_blank" rel="noopener noreferrer" title="Link to Mar Morán site">Aurelio Viribay</a> 
+        </p>
+    </div>
+    <!-- <a href="#about" title="Enlace a la seción 2 de la página" class="arrow-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ffff">
+            <path d="M12 15.5l-8-8-1.5 1.5 9.5 9.5 9.5-9.5-1.5-1.5z"/>
+        </svg>
+    </a> -->
+</section>
+<style>
+    .hero{
+    background-image: url(../img/hero.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.hero::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.3);
+}  
+.hero__container{
+    position: absolute;
+    top:50%;
+    left: 5%;
+    z-index: 1;
+}
+.hero__text{
+    font-size: var(--font-size-1);
+}
+.mask {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 5px;
+  }
+  
+  .point {
+    width: 7px;
+    height: 7px;
+    background-color: var(--light-color);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    animation: blink 5s infinite; /* Aplicamos la animación "blink" a los puntos */
+  }
+  .action:hover .point{
+    background-color: var(--tertiary-color);
+  }
+  .point_text__show{
+    background-color: transparent;
+    font-size: 16px;
+    position: absolute;
+    z-index: 1;
+  }
+  .link{
+    color: var(--light-color);
+    text-decoration: none;
+  }
+  .link:hover{
+    color: var(--tertiary-color);
+  }
+@keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2;
+    }
+  }
+  .arrow-container {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .arrow-container:hover svg{
+    fill: var(--tertiary-color);
+  }
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+  }
+  .about{
+    text-align: center;
+    padding: 2rem;
+  }
+  .about__title{
+    font-size: var(--font-size-5);
+    margin-bottom: var(--margin-2);
+  }
+  .about__container{
+    max-width: 1080px;
+  }
+  .action{
+    width: 10%;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+  }
+</style>
