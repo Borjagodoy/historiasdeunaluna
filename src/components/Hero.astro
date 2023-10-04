@@ -3,125 +3,168 @@
 ---
 
 <section id="hero" class="hero">
-    <div class="mask">
+  <div class="mask">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+  </div>
+  <div class="caratula">
+    <div class="caratula_description fadeIn delayed-2">
+      <p>CANCIONES PARA VOZ Y PIANO</p>
+      <p>DE MANUEL PALAU</p>
     </div>
-    <div class="hero__container">
-        <h1 class="hero__title">Luna Muerta</h1>
-        <p class="hero__subtitle">Manuel Palau</p>
-        <p class="hero__text">
-            <a class="link" href="http://marmoransoprano.com" target="_blank" rel="noopener noreferrer" title="Link to Mar Morán site">Mar Morán</a> 
-            & 
-            <a class="link" href="https://www.aurelioviribay.com/" target="_blank" rel="noopener noreferrer" title="Link to Mar Morán site">Aurelio Viribay</a> 
-        </p>
+    <img class="caratula_title fadeIn delayed-1" src="./img/LunaMuertaTitle.png" alt="Texto Luna Muerta">
+    <img class="caratula_image" src="./img/LunaMusicos.png" alt="Luna con sombras de una soprano y un pianista">
+    <div class="caratula_artists">
+      <p class="fadeIn delayed-3"><span>Mar Moran</span> (Soprano)</p>
+      <p class="fadeIn delayed-4"><span>Aurelio viribay</span> (Piano)</p>
     </div>
-    <!-- <a href="#about" title="Enlace a la seción 2 de la página" class="arrow-container">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#ffff">
-            <path d="M12 15.5l-8-8-1.5 1.5 9.5 9.5 9.5-9.5-1.5-1.5z"/>
-        </svg>
-    </a> -->
+  </div>
+  
 </section>
 <style>
-    .hero{
-    background-image: url(../img/hero.jpg);
+  .hero {
     height: 100vh;
-    background-size: cover;
-    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-}
-.hero::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+  }
+  img{
     width: 100%;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.3);
-}  
-.hero__container{
-    position: absolute;
-    top:50%;
-    left: 5%;
-    z-index: 1;
-}
-.hero__text{
-    font-size: var(--font-size-1);
-}
-.mask {
+  }
+  .caratula {
+    max-width: 800px;
     position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .caratula_title {
+    position: absolute;
+    top: 0rem;
+    width: 80%;
+    z-index: 1;
+  }
+  .caratula_description{
+    text-align: center;
+    position: absolute;
+    top: -1.5rem;
+    font-size: 0.8rem;
+    font-weight: 100;
+    color: #ffff;
+  }
+  .caratula_artists{
+    position: absolute;
+    bottom: -1rem;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    color: #ffff;
+  }
+  .mask {
+    position: absolute;
     width: 100%;
     height: 100%;
-    background-color: transparent;
-    border-radius: 5px;
+    background-color: transaparent;
+    z-index: 3;
   }
-  
-  .point {
-    width: 7px;
-    height: 7px;
-    background-color: var(--light-color);
-    border-radius: 50%;
+  .star{
     position: absolute;
-    z-index: 1;
-    animation: blink 5s infinite; /* Aplicamos la animación "blink" a los puntos */
+    width: 0;
+    height: 0;
+    border-left: 2.5px solid transparent;
+    border-right: 2.5px solid transparent;
+    border-bottom: 5px solid white; /* You can change the color here */
+    margin: 2.5px auto;
+    z-index: 3
   }
-  .action:hover .point{
-    background-color: var(--tertiary-color);
-  }
-  .point_text__show{
-    background-color: transparent;
-    font-size: 16px;
+  .star::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 2.5px solid transparent;
+    border-right: 2.5px solid transparent;
+    border-top: 5px solid white; /* You can change the color here */
     position: absolute;
-    z-index: 1;
-  }
-  .link{
-    color: var(--light-color);
-    text-decoration: none;
-  }
-  .link:hover{
-    color: var(--tertiary-color);
-  }
-@keyframes blink {
-    0%, 100% {
-      opacity: 1;
+    top: 1.75px;
+    left: -2.5px;
+}
+  @keyframes blink {
+    0% {
+      opacity: 0;
     }
     50% {
-      opacity: 0.2;
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
     }
   }
-  .arrow-container {
-    position: absolute;
-    left: 50%;
-    bottom: 10%;
-    animation: bounce 2s infinite;
-    cursor: pointer;
-    z-index: 1;
+  .fadeIn {
+    opacity: 0;
+}
+  .delayed-1 {
+      animation: fadeIn 1.5s ease-in-out 2s forwards; /* Aquí establecemos un retraso de 2 segundos */
   }
-  .arrow-container:hover svg{
-    fill: var(--tertiary-color);
+  .delayed-2 {
+      animation: fadeIn 1.5s ease-in-out 4s forwards; /* Aquí establecemos un retraso de 2 segundos */
   }
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
+  .delayed-3 {
+      animation: fadeIn 1.5s ease-in-out 6s forwards; /* Aquí establecemos un retraso de 2 segundos */
+  }
+  .delayed-4 {
+      animation: fadeIn 1.5s ease-in-out 8s forwards; /* Aquí establecemos un retraso de 2 segundos */
+  }
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
     }
-    40% {
-      transform: translateY(-10px);
+    100% {
+        opacity: 1;
     }
-  }
-  .about{
-    text-align: center;
-    padding: 2rem;
-  }
-  .about__title{
-    font-size: var(--font-size-5);
-    margin-bottom: var(--margin-2);
-  }
-  .about__container{
-    max-width: 1080px;
-  }
-  .action{
-    width: 10%;
-    height: 30px;
-    cursor: pointer;
-    position: absolute;
-    z-index: 1;
-  }
+}
 </style>
+<script is:inline>
+  // Obtén todos los elementos con la clase '.star'
+const stars = document.querySelectorAll('.star');
+
+
+// Aplica las posiciones a los elementos '.star'
+stars.forEach((star, index) => {
+  const randomTopPercentage =5 + Math.random() * 100 - 5;
+  const randomLeftPercentage = Math.random() < 0.5 ? Math.random() * 30 : 60 + Math.random() * 30;
+  const randomAnimationDuration = 3 + Math.random() * 3;
+
+  star.style.animation = `blink ${randomAnimationDuration}s infinite`;
+  star.style.left = randomLeftPercentage + '%';
+  star.style.top = randomTopPercentage + '%';
+});
+</script>
