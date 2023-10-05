@@ -39,8 +39,7 @@ const { title } = Astro.props;
 		<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" as="style"
-		onload="this.onload=null;this.rel='stylesheet'">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<slot />
@@ -51,8 +50,27 @@ const { title } = Astro.props;
 		margin: 5px;
 		padding: 0;
 	}
-	section{
-		height: 100vh;
+	p {
+		text-align: justify;
+	}
+	section {
+		padding: 2rem;
+	}
+	.content-center{
+		display: flex;
+		justify-content: center;
+	}
+	.title{
+		font-size: var(--font-size-1);
+		font-weight: 200;
+		color: #fff;
+	}
+	.subtitle{
+		font-size: 16px;
+		padding: 10px;
+	}
+	.container {
+		max-width: 1200px;
 	}
 	html{
 		--main-color: #1B262C;
