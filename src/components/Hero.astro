@@ -1,4 +1,5 @@
 ---
+import MusicPlatformLink from "./MusicPlatformLink.astro";
 
 ---
 
@@ -49,12 +50,13 @@
       <p class="fadeIn delayed-4"><span>Aurelio viribay</span> (Piano)</p>
     </div>
   </div>
-  
+  <MusicPlatformLink />
 </section>
 <style>
   .hero {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -132,16 +134,19 @@
     opacity: 0;
 }
   .delayed-1 {
-      animation: fadeIn 1.5s ease-in-out 2s forwards; /* Aquí establecemos un retraso de 2 segundos */
+      animation: fadeIn 1.5s ease-in-out 1s forwards; /* Aquí establecemos un retraso de 2 segundos */
   }
   .delayed-2 {
-      animation: fadeIn 1.5s ease-in-out 4s forwards; /* Aquí establecemos un retraso de 2 segundos */
+      animation: fadeIn 1.5s ease-in-out 2s forwards; /* Aquí establecemos un retraso de 2 segundos */
   }
   .delayed-3 {
-      animation: fadeIn 1.5s ease-in-out 6s forwards; /* Aquí establecemos un retraso de 2 segundos */
+      animation: fadeIn 1.5s ease-in-out 3s forwards; /* Aquí establecemos un retraso de 2 segundos */
   }
   .delayed-4 {
-      animation: fadeIn 1.5s ease-in-out 8s forwards; /* Aquí establecemos un retraso de 2 segundos */
+      animation: fadeIn 1.5s ease-in-out 4s forwards; /* Aquí establecemos un retraso de 2 segundos */
+  }
+  .delayed-5 {
+      animation: fadeIn 1.5s ease-in-out 5s forwards; /* Aquí establecemos un retraso de 2 segundos */
   }
 @keyframes fadeIn {
     0% {
