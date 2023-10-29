@@ -1,13 +1,40 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
+import Interpretes from '../components/interpretes.astro';
 import ProgramNotes from '../components/ProgramNotes.astro';
 
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<Hero />
-		<ProgramNotes />
+		<h1 class="projects_title">Historias de una Luna</h1>
+		<div class="projects">
+			<a class="project" href="/lunaclara" class="href">
+				<img class="project_image" src="./img/coverlunaclara.jpg" alt="">
+			</a>
+			<a class="project" href="/lunamuerta" class="href">
+				<img class="project_image" src="./img/coverlunamuerta.jpg" alt="">
+			</a>
+		</div>
+		<Interpretes />
+
 	</main>
 </Layout>
+<style>
+	.projects_title{
+		text-align: center;
+		margin: 4rem 0;
+	}
+	.projects{
+    	display: flex;
+    	flex-direction: row;
+    	width: 100%;
+	}
+	.project{
+		width: 50%;
+	}
+	.project_image{
+		width: 100%;
+	}	
+
+</style>
