@@ -1,15 +1,18 @@
 ---
+import AwardsClara from "./AwardsClara.astro";
 import MusicPlatformClaraLink from "./MusicPlatformClaraLink.astro";
 
 ---
 
-<section id="hero" class="hero">
-  <div class="caratula">
-    <img class="caratula_image" src="./img/coverlunamuerta.jpg" alt="Caratula del disco luna clara">
+<main class="hero">
+  <div class="container">
+    <div class="caratula">
+      <img class="caratula_image" src="./img/coverlunaclara.jpg" alt="Caratula del disco luna clara">
+      <MusicPlatformClaraLink />
+    </div>
+    <AwardsClara />
   </div>
-  <MusicPlatformClaraLink />
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0lRQXLzG8iJ8rt6E4PEasU?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</section>
+</main>
 <style>
   .hero {
     height: 100vh;
@@ -18,11 +21,19 @@ import MusicPlatformClaraLink from "./MusicPlatformClaraLink.astro";
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-top: 5rem;
+  }
+  .hero .container {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .caratula{
-    text-align: center;
+    width: 50%;
+    position: relative;
   }
   img{
-    width: 50%;
+    width: 100%;
   }
 </style>

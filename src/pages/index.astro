@@ -1,40 +1,82 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Interpretes from '../components/interpretes.astro';
-import ProgramNotes from '../components/ProgramNotes.astro';
+import AboutTheProject from '../components/AboutTheProject.astro';
 
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1 class="projects_title">Historias de una Luna</h1>
-		<div class="projects">
-			<a class="project" href="/lunaclara" class="href">
-				<img class="project_image" src="./img/coverlunaclara.jpg" alt="">
-			</a>
-			<a class="project" href="/lunamuerta" class="href">
-				<img class="project_image" src="./img/coverlunamuerta.jpg" alt="">
-			</a>
+		<div class="container">
+			<h1 class="projects_title">Historias de una Luna</h1>
+			<div id="historiasDeUnaLuna" class="projects">
+				<a class="project" href="/lunaclara" class="href">
+					<img class="project_image" src="./img/coverlunaclara.jpg" alt="Portada del disco historias de una luna, disco de Mar Morán y Aurelio Viribay con 21 canciones de Jesus García Leoz">
+					<div class="mask">
+						<p>Conoce más sobre Luna Clara</p>
+					</div>
+				</a>
+				<a class="project" href="/lunamuerta" class="href">
+					<img class="project_image" src="./img/coverlunamuerta.jpg" alt="Portada del disco Luna Muerta, disco de Mar Morán y Aurelio Viribay con 29 canciones de Manuel Palau">
+					<div class="mask">
+						<p>Conoce más sobre Luna Muerta</p>
+					</div>
+				</a>
+			</div>
+			<AboutTheProject />
+			<Interpretes />
 		</div>
-		<Interpretes />
-
 	</main>
 </Layout>
 <style>
+	main{
+		display: flex;
+		justify-content: center;
+		margin-top: 3rem;
+	}
 	.projects_title{
 		text-align: center;
 		margin: 4rem 0;
+		color: #fff;
+		font-weight: 300;
 	}
 	.projects{
     	display: flex;
     	flex-direction: row;
     	width: 100%;
+		justify-content: center;
 	}
-	.project{
-		width: 50%;
+	.project {
+		width: 40%;
+		display: inline-block;
+		position: relative;
+		overflow: hidden;
+		transition: transform 0.3s;
+		margin: 1rem;
+}
+
+	.project:hover {
+		transform: scale(1.1);
 	}
 	.project_image{
 		width: 100%;
-	}	
+	}
+	.mask {
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(0, 0, 0, 0.8);
+		transition: opacity 0.5s;
+		color: #fff
+	}
+	.mask:hover {
+		opacity: 1;
+	}
 
 </style>

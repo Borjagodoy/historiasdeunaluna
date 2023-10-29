@@ -1,0 +1,147 @@
+---
+type MenuLinks = {
+    [key: string]: { title: string; href: string }[];
+};
+const currentPath: string = Astro.url.pathname.replace('/', '');
+
+const menulinks: MenuLinks = {
+        home: [
+            {
+                title: "Sobre el proyecto",
+                href: "#historiasDeUnaLuna",
+            },
+            {
+                title: "Artistas",
+                href: "#interpretes",
+            },
+            {
+                title: "Luna Clara",
+                href: "/lunaclara",
+            },
+            {
+                title: "Luna Muerta",
+                href: "/lunamuerta",
+            },
+        ],
+        lunamuerta: [
+            {
+                title: "Making of",
+                href: "#makingof",
+            },
+            {
+                title: "Calendario",
+                href: "#calendario",
+            },
+            {
+                title: "Notas al Programa",
+                href: "#notas",
+            },
+            {
+                title: "Letras",
+                href: "#letras",
+            }
+        ],
+        lunaclara: [
+            {
+                title: "Making of",
+                href: "#makingof",
+            },
+            {
+                title: "Critica",
+                href: "#critica",
+            },
+            {
+                title: "Premios",
+                href: "#premios",
+            },
+            {
+                title: "Notas al Programa",
+                href: "#notas",
+            },
+            {
+                title: "Letras",
+                href: "/letras",
+            },
+        ],
+};
+
+const linksToShow = menulinks[currentPath] || menulinks.home;
+---
+<header class="sticky-header">
+    <div class="container">
+        <div class="logo">
+            <a class="link" href="/">Historias de una Luna</a>
+        </div>
+        <nav class="menu">
+            <ul>
+                {linksToShow
+                .map((link) =>
+                <li><a class="link" href={link.href}>{link.title}</a></li>)}
+            </ul>
+        </nav>
+    </div>
+</header>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .sticky-header {
+        background: #000;
+        color: #fff;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        transition: background 0.3s;
+        display: flex;
+        justify-content: center;
+    }
+    .sticky-header .container{
+        max-width: 1500px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        width: 100px; /* Tamaño del logotipo */
+    }
+
+    .menu ul {
+        list-style: none;
+        display: flex;
+    }
+    .menu li {
+        margin-right: 20px; /* Espacio entre elementos del menú */
+    }
+
+
+    /* Cambia el estilo del encabezado al hacer scroll hacia abajo */
+    .sticky {
+        background: #00000063;
+        color: #333;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    }
+    /* Estilos para dispositivos móviles (ancho máximo de pantalla) */
+@media (max-width: 768px) {
+    .menu{
+        display: none;
+    }
+}
+
+
+</style>
+<script is:inline>
+    window.addEventListener("scroll", function() {
+    var header = document.querySelector(".sticky-header");
+
+    if (window.scrollY > 50) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+});
+</script>
