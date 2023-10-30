@@ -2,7 +2,11 @@
 type MenuLinks = {
     [key: string]: { title: string; href: string }[];
 };
-const currentPath: string = Astro.url.pathname.replace('/', '');
+interface Props {
+	page: string;
+}
+
+const { page } = Astro.props;
 
 const menulinks: MenuLinks = {
         home: [
@@ -65,7 +69,7 @@ const menulinks: MenuLinks = {
         ],
 };
 
-const linksToShow = menulinks[currentPath] || menulinks.home;
+const linksToShow = menulinks[page] || menulinks.home;
 ---
 <header class="sticky-header">
     <div class="container">

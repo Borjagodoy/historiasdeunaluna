@@ -4,9 +4,10 @@ interface Props {
 	title: string;
 	description: string;
 	shortDescription: string;
+	route: string;
 }
 
-const { title, description, shortDescription } = Astro.props;
+const { title, description, shortDescription, route } = Astro.props;
 const completeTitle = `${title} - ${shortDescription} - Mar Morán & Aurelio Viribay`;
 ---
 
@@ -55,7 +56,7 @@ const completeTitle = `${title} - ${shortDescription} - Mar Morán & Aurelio Vir
 		</script>
 	</head>
 	<body>
-		<Header />
+		<Header page={route} />
 		<slot />
 	</body>
 </html>
