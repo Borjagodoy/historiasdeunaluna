@@ -7,10 +7,6 @@ const currentPath: string = Astro.url.pathname.replace('/', '');
 const menulinks: MenuLinks = {
         home: [
             {
-                title: "Sobre el proyecto",
-                href: "#historiasDeUnaLuna",
-            },
-            {
                 title: "Artistas",
                 href: "#interpretes",
             },
@@ -24,6 +20,10 @@ const menulinks: MenuLinks = {
             },
         ],
         lunamuerta: [
+            {
+                title: "Luna Muerta",
+                href: "/lunamuerta",
+            },
             {
                 title: "Making of",
                 href: "#makingof",
@@ -43,16 +43,16 @@ const menulinks: MenuLinks = {
         ],
         lunaclara: [
             {
+                title: "Luna Clara",
+                href: "/lunaclara",
+            },
+            {
                 title: "Making of",
                 href: "#makingof",
             },
             {
-                title: "Critica",
-                href: "#critica",
-            },
-            {
-                title: "Premios",
-                href: "#premios",
+                title: "Noticias destacadas",
+                href: "#noticias",
             },
             {
                 title: "Notas al Programa",
@@ -60,7 +60,7 @@ const menulinks: MenuLinks = {
             },
             {
                 title: "Letras",
-                href: "/letras",
+                href: "#letras",
             },
         ],
 };
