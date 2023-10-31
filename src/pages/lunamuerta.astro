@@ -7,9 +7,10 @@ import Calendar from '../components/calendar.astro';
 import Leters from '../components/leters.astro';
 ---
 
-<Layout title="Luna Muerta" description='29 canciones de Manuel Palau en castellano, este proyecto es el segundo disco de Mar Morán y Aurelio Viribay donde presentan 29 canciones del compositor Valencian, con este album cierran el binomio "Luna Clara" y "Luna Muerta" que componen este proyecto "Historias de una Luna" donde nos encontramos con 50 canciones no grabadas de dos importantes compositores españoles, Manuel Palau y Jesús García Leoz' shortDescription='29 Canciones de Manuel Palau en castellano' route="lunamuerta">
+<Layout title="Luna Muerta" image="https://www.historiasdeunaluna.es/img/coverlunamuerta.jpg" description='29 canciones de Manuel Palau en castellano, este proyecto es el segundo disco de Mar Morán y Aurelio Viribay donde presentan 29 canciones del compositor Valencian, con este album cierran el binomio "Luna Clara" y "Luna Muerta" que componen este proyecto "Historias de una Luna" donde nos encontramos con 50 canciones no grabadas de dos importantes compositores españoles, Manuel Palau y Jesús García Leoz' shortDescription='29 Canciones de Manuel Palau en castellano' route="lunamuerta">
 	<main class="luna-muerta">
 		<Hero />
+		<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3nfg8hiGDf2HfTaiOWWtkv?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 		<!-- <MakingOff /> -->
 		<Calendar />
 		<ProgramNotes />
@@ -18,6 +19,12 @@ import Leters from '../components/leters.astro';
 </Layout>
 <style>
 	.luna-muerta{
-
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	iframe{
+		max-width: 1200px;
 	}
 </style>

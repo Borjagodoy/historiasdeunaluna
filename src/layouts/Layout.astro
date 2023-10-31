@@ -5,10 +5,12 @@ interface Props {
 	description: string;
 	shortDescription: string;
 	route: string;
+	image: string
 }
 
-const { title, description, shortDescription, route } = Astro.props;
+const { title, description, shortDescription, route, image } = Astro.props;
 const completeTitle = `${title} - ${shortDescription} - Mar Morán & Aurelio Viribay`;
+const url = `https://www.historiasdeunaluna.es${route}`;
 ---
 
 <!doctype html>
@@ -26,18 +28,18 @@ const completeTitle = `${title} - ${shortDescription} - Mar Morán & Aurelio Vir
 		<meta name="author" content="Gomar producciones">
 		<meta itemprop="name" content={completeTitle}>
 		<meta itemprop="description" content={description}>
-		<meta name="image" content="https://firebasestorage.googleapis.com/v0/b/ayudaaunar.appspot.com/o/Screenshot.png?alt=media&token=5bbf50f1-ba6f-414f-9a6c-50c622867bff">
+		<meta name="image" content={image}>
 	
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:title" content={completeTitle}>
 		<meta name="twitter:description" content={description}>
-		<meta name="twitter:image:src" content="https://firebasestorage.googleapis.com/v0/b/ayudaaunar.appspot.com/o/Screenshot.png?alt=media&token=5bbf50f1-ba6f-414f-9a6c-50c622867bff">
+		<meta name="twitter:image:src" content={image}>
 	
 		<!-- Open Graph general (Facebook, Pinterest & Google+) -->
 		<meta name="og:title" content={completeTitle}>
 		<meta name="og:description" content={description}>
-		<meta name="og:url" content="www.historiasdeunaluna.es">
+		<meta name="og:url" content={url}>
 		<meta name="og:site_name" content={description}>
 		<meta name="og:locale" content="es_ES">
 		<meta name="og:type" content="website">
@@ -46,7 +48,7 @@ const completeTitle = `${title} - ${shortDescription} - Mar Morán & Aurelio Vir
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap" rel="stylesheet">
 		<!-- Google tag (gtag.js) -->
-		<script is="" async src="https://www.googletagmanager.com/gtag/js?id=G-9PX7EQV1XV"></script>
+		<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-9PX7EQV1XV"></script>
 		<script is:inline>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
