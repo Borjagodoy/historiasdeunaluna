@@ -27,6 +27,12 @@ import AboutTheProject from '../components/AboutTheProject.astro';
 					</div>
 				</a>
 			</div>
+			<section id="comprarLunaMuerta" class="buy-lunamuerta">
+				<p>Tan solo tenemos 300 copias en formato físico de "Luna Muerta" y aún algunas copias de "Luna clara" 
+					Si quieres ser uno de las pocas personas en tener el binomio Lunar, no dudes en contactar con nosotros clickando en el siguiente botón.
+				</p>
+				<a class="buton" href="mailto:info@marmoransoprano.es?subject=Me gustaría adquirir el disco de [Luna Muerta o Luna Clara o ambos]&body=Hola me gustaría adquirir el disco de [Luna Muerta o Luna Clara o ambos]. ¿Como se puede adquirir?">Comprar el binómio Lunar</a>
+			</section>
 			<AboutTheProject />
 			<Interpretes />
 		</div>
@@ -38,6 +44,11 @@ import AboutTheProject from '../components/AboutTheProject.astro';
 		justify-content: center;
 		margin-top: 4rem;
 	}
+	.container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 	.projects_title{
 		font-family: 'Nanum Myeongjo', serif;
 		text-align: center;
@@ -46,6 +57,31 @@ import AboutTheProject from '../components/AboutTheProject.astro';
 		font-weight: 300;
 		font-size: 2rem;
 	}
+	.buy-lunamuerta{
+			width: 400px;
+			height: 400px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			margin-top: 2rem:
+		}
+		.buton{
+			z-index: 10;
+			display: block;
+			color: #fff;
+			border: solid 1px;
+			padding: 2rem;
+			width: 175px;
+			text-align: center;
+			text-decoration: none;
+			margin: 3rem;
+			transition: background-color 0.5s;
+		}
+		.buton:hover{
+			background-color: #fff;
+			color: #000;
+		}
 	.projects{
     	display: flex;
     	flex-direction: row;

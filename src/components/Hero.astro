@@ -51,11 +51,14 @@ import MusicPlatformLink from "./MusicPlatformLink.astro";
     </div>
   </div>
   <MusicPlatformLink />
-  <h1 class="promo_text fadeIn delayed-5">#lunamuertacd</h1>
+  <a target="_blank" href="https://www.cezanneproducciones.com/" class="link">
+    <img class="logo_dist fadeIn delayed-5" src="./img/cezanelogo.png" alt="logo cezane prodciones">
+  </a>
+  <a target="blank" href="https://www.instagram.com/explore/tags/lunamuertacd/" class=" link promo_text fadeIn delayed-5">#lunamuertacd</a>
 </section>
 <style>
   .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,9 +66,29 @@ import MusicPlatformLink from "./MusicPlatformLink.astro";
     position: relative;
     width: 100%
   }
-  img{
-    width: 100%;
+  .promo_text{
+    font-size: 2rem;
+    margin: 2rem;
   }
+  .promo_text:hover{
+    text-decoration: underline;
+  }
+  .link{
+    z-index: 10;
+  }
+  .logo_dist{
+    width: 100px;
+    margin-bottom: 1rem;
+    transition: transform 0.5s;
+  }
+  .logo_dist:hover{
+    width: 110px;
+    transform: scale(1.1); 
+  }
+  img {
+    width: 100%;
+   
+  } 
   .caratula {
     max-width: 800px;
     position: relative;
